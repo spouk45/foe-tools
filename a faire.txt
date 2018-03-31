@@ -1,0 +1,4 @@
+- probleme de déco reco rafraichissemet entre acceptation de guilde. Revoir le controle sessionguild
+- revoir les redirection de page
+- faire le truc pour quitter la guilde
+- responsive

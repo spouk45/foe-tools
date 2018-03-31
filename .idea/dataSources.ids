@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - foe2@localhost" uuid="46cac22e-f852-42b4-b8fd-57b27944c92e">
+    <database-info product="MySQL" version="5.6.15-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="foe2"/>
+    <table name="account" schema="" catalog="foe2" type="TABLE">
+      <column name="account_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="pass" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="account_id"/>
+      <index name="user" unique="true" columns="user"/>
+    </table>
+    <table name="age" schema="" catalog="foe2" type="TABLE">
+      <column name="id_age" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="age_name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id_age"/>
+    </table>
+    <table name="comment" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="news_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gm" schema="" catalog="foe2" type="TABLE">
+      <column name="gmId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="gmName" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ageId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="gmImage" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="gmId"/>
+    </table>
+    <table name="gm_list" schema="" catalog="foe2" type="TABLE">
+      <column name="gmListId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="playerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="gmId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="level" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pfAmount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pfMax" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="podiumTab" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="dateMajPf" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="dateMajPodium" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="gmListId"/>
+    </table>
+    <table name="guild" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="world_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="level" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fullName" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="message" schema="" catalog="foe2" type="TABLE">
+      <column name="messageId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="message" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="dateMessage" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fromPlayerId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="fromAccountId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" precision="80" scale="0" nullable="true" jdbcType="12"/>
+      <column name="link" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="messageId"/>
+    </table>
+    <table name="message_link" schema="" catalog="foe2" type="TABLE">
+      <column name="message_linkId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="toPlayerId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="toAccountId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="messageId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="everRead" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="message_linkId"/>
+    </table>
+    <table name="news" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="80" scale="0" nullable="false" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="date" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="pf" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="seek_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pf" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="unlocked" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="player_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="player" schema="" catalog="foe2" type="TABLE">
+      <column name="player_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="account_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="world_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="resources_date_update" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="guild_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="level_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="pf_prod" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="player_id"/>
+    </table>
+    <table name="resources" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <column name="age_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="image_name" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="seek" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="pf" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="resource1_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="resource2_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="nb_resource1" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="nb_resource2" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="age_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="col" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="li" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="link" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stock" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="resource_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="player_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="production" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="need" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="boost" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="world" schema="" catalog="foe2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

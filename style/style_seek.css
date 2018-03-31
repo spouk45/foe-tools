@@ -1,0 +1,248 @@
+#seekWrapper{
+		/*overflow-x: auto;
+		height:1000px;*/
+}
+
+.seek{
+	border:1px solid;
+	width:240px;
+	display:inline-block;	
+	margin:10px;	
+	position:relative;
+	font-size:11px;
+	border-radius:4px;
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+.seek table {
+	/*border:1px solid;*/
+	width:100%;
+	border-collapse:collapse;
+}
+
+.seek table td{
+	/*border:1px solid;	*/
+}
+ 
+ .seek tr{height:25px;}
+ .seek td{height:25px;line-height:25px;}
+.seek td.logo{
+	vertical-align:middle;
+	line-height:22px;
+	width:30px;
+}
+.seek td.logo img{	
+	display:block;
+	width:22px;
+	height:22px;
+	margin:auto;
+}
+
+.seek_valid {
+	width:30px;
+	vertical-align:middle;
+}
+.seek_valid img {
+	display:block;
+	margin:auto;	
+}
+
+.seek .name{
+	width:100%; 
+	font-weight:bold;
+	border:none;
+	border-bottom:1px solid;
+	position: relative;
+	}
+.seek input{
+	width:25px;
+	height:12px;	
+}
+
+.titleAge{
+	font-size:20px;
+	color:rgb(50,50,50);
+	border-top:2px solid brown;
+	border-bottom:2px solid brown;
+	padding:5px 0;
+	margin-bottom:10px;
+}
+
+.groupAge{padding-bottom:10px;}
+
+.calcSelected{
+	-moz-box-shadow: 0px 0px 10px 5px #cc33ff;
+-webkit-box-shadow: 0px 0px 10px 5px #cc33ff;
+-o-box-shadow: 0px 0px 10px 5px #cc33ff;
+box-shadow: 0px 0px 10px 5px #cc33ff;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#cc33ff, Direction=NaN, Strength=10);
+}
+.hoverBorder{
+	-moz-box-shadow: 0px 0px 10px 5px #34ff34;
+-webkit-box-shadow: 0px 0px 10px 5px #34ff34;
+-o-box-shadow: 0px 0px 10px 5px #34ff34;
+box-shadow: 0px 0px 10px 5px #34ff34;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#34ff34, Direction=NaN, Strength=10);
+}
+.hoverBorderYellow{
+	-moz-box-shadow: 0px 0px 10px 5px #e4e600;
+-webkit-box-shadow: 0px 0px 10px 5px #e4e600;
+-o-box-shadow: 0px 0px 10px 5px #e4e600;
+box-shadow: 0px 0px 10px 5px #e4e600;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#e4e600, Direction=NaN, Strength=10);
+}
+
+.calc {
+	position:absolute;
+	right:5px;
+	top: 2px;
+}
+
+.calc:hover img{
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+#contain_calc,#pf_wrap{
+	position:fixed;
+	left:0;	
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);	
+	background-color:rgba(234, 234, 234,0.85);	
+	border-radius:0 4px 4px 0;	
+	color:rgb(70, 70, 70);
+	z-index:10;	
+	font-size:10px;
+	width:220px;	
+}
+
+#contain_calc{	
+	top:50%;	
+	margin-top:-200px;
+	height:400px;	
+	display:none;		
+	
+	resize: both;	
+	overflow-x:auto;
+}
+
+#pf_wrap{
+	left:0;
+	top:50%;
+	margin-top:-260px;	
+}
+#pf_wrap div{
+	margin:5px;
+	text-align:center;
+}
+#pf_wrap div p{
+	margin-bottom:5px;
+}
+#pf_wrap input{
+	font-size:10px;
+	width:30px;
+	text-align:right;
+	vertical-align:top;
+	margin-left:10px;
+	}
+
+#contain_calc p{
+	vertical-align:middle;
+	margin-bottom:2px;
+}
+#contain_calc img{
+	display:inline-block;
+	vertical-align:bottom;
+}
+
+#contain_calc #wrap_need{
+	margin-top:15px;
+	text-align:center;
+}
+
+#wrap_need{
+	overflow-x:auto;
+	height:260px;	
+}
+#closeNeed{
+	position:absolute;
+	top:2px;right:2px;
+}
+
+#closeNeed img{
+	display:block;
+	width:15px;height:15px;	
+	padding:2px;
+	}
+	
+#closeNeed img:hover{
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+#ancre{
+	font-size:11px;
+	width:150px;
+	position:fixed;
+	right:5px;
+	top:50%;
+	margin-top:-100px;	
+	background-color:rgba(234, 234, 234,0.45);
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+	z-index:10;
+	border-radius:5px;
+}
+#ancre a{
+	display:inline-block;
+	text-decoration:none;
+	color:rgb(70,70,70);
+	padding:0 20px;
+	margin:2px auto;
+}
+
+#ancre a:hover{
+	background-color:#0099da;
+	color:white;
+	border-radius:3px;
+}
+
+.need,.missed,.leftDay{
+	display:inline-block;
+	width:60px;	
+	text-align:center;
+}
+.need p,.missed p,.leftDay p{
+	height:18px;
+	line-height:18px;
+}
+.title{
+	font-weight:bold;
+	font-size:11px;
+}
+
+#TotalPf{
+	text-align:center;
+	margin:15px 20px 0 20px;
+	}
+
+@media screen and (max-width:1335px) { 	
+	.seek{
+		width:200px;
+	}
+	.seek .name{
+	font-size:10px;
+	}
+	.seek_valid {
+	width:25px;	
+	height:25px;
+}
+.seek_valid img {	
+	width:18px;
+	height:20px;
+}
+.seek td.logo{	
+	line-height:20px;
+	width:28px;
+}
+.seek td.logo img{		
+	width:20px;
+	height:20px;
+}
+}

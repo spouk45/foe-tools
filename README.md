@@ -2,6 +2,6 @@
 
 outil de gestion pour jeux en ligne "Forge of Empire"
 
-récupérer le .sql pour la bdd. 
+récupérer le .sql à importer dans votre bdd.
 
-Voir le fichier config et connect.php pour les paramètres.
+Voir le fichier config pour régler vos paramtres de connection à la BDD les paramètres.

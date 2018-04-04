@@ -3,6 +3,7 @@
 $root='foe2';//emplacement du site sur le serveur
 $host='localhost';// adresse du site 127.0.0.1
 $dbname='foe2'; // nom de la base de données
+$username='root';
 $password=''; // mdp de la base
 $config=true;
 
